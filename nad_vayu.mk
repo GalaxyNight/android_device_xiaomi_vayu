@@ -12,9 +12,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
 # Inherit common ArrowOS configurations
-$(call inherit-product, vendor/evolution/config/common.mk)
+$(call inherit-product, vendor/nusantara/config/common.mk)
 
-PRODUCT_NAME := evolution_vayu
+TARGET_USES_BLUR := true
+USE_PIXEL_CHARGING := true
+NAD_BUILD_TYPE := UNOFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+USE_GAPPS ?= true
+USE_AOSP_CLOCK := true
+
+# Product
+PRODUCT_NAME := nad_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
