@@ -106,6 +106,8 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     libxml2 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
+    $(call inherit-product-if-exists, vendor/miuicamera/config.mk)
+
 
 PRODUCT_PACKAGES += \
     libshim_megvii
